@@ -5,7 +5,7 @@ package evgenyt.springdemo;
  */
 
 public class MusicPlayer {
-    public void play() {
-        System.out.println("Playing music...");
+    public void play(String music) {
+        System.out.println("Playing music: " + music);
     }
 }

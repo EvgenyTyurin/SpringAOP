@@ -4,8 +4,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Aspects demo.
- * We have MusicPlayer and aspect PlayerLogger that monitor player actions
- *
+ * We have MusicPlayer and aspect PlayerLogger that monitor and intercept
+ * MusicPlayer actions
  */
 public class App 
 {
@@ -15,7 +15,7 @@ public class App
                 "applicationContext.xml");
        // musicPlayer is a component defined in MusicPlayer.java
        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-       musicPlayer.play();
+       musicPlayer.play("Yesterday");
        context.close();
     }
 }
